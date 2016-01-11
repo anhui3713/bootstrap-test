@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Bootstrap练习 - 下拉控件</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<!-- 新 Bootstrap 核心 CSS 文件 -->
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+	<style type="text/css">
+		
+		.row {
+			margin-bottom: 20px;
+		}
+
+		[class^='col-'] > .remark {
+			border: 1px solid rgba(150,150,150,.8);
+			border-radius: 5px;
+			padding: 10px 5px;
+		}
+
+		pre {
+			margin-bottom: 0px;
+		}
+		
+	</style>
+</head>
+<body>
+	
+	<div class="container">
+		<h1>下拉控件</h1>
+		<div class="row">
+			<div class="col-md-4"><h3>描述</h3></div>
+			<div class="col-md-8"><h3>示例</h3></div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				<div class="remark">
+					基本下拉菜单样式：按钮样式为dropdown-toggle。ul样式为dropdown-menu。
+					必须设置按钮的属性data-toggle="dropdown"。
+					<ul class="list-group">
+						<li class="list-group-item help-block">通过 span class="caret" 来表示一个下拉箭头</li>
+						<li class="list-group-item help-block">将容器设置为class="dropdown"可以使按钮和下拉对齐</li>
+						<li class="list-group-item help-block">将ul中的li设置为class="liider"就可以将li变成分割线</li>
+						<li class="list-group-item help-block">只需要将容器设置为class="dropup"即可设置为向上拉</li>
+						<li class="list-group-item help-block">将ul中的li设置为class="dropdown-header"可将li设置为分组标题</li>
+						<li class="list-group-item help-block">将ul中的li设置为class="disabled"可将li设置为禁用状态</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-8">
+				<div class="remark">
+					<div class="dropdown">
+						<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">基本...<span class="caret"></span></button>
+						<ul class="dropdown-menu">
+							<li><a href="#">子菜单1</a></li>
+							<li><a href="#">子菜单2</a></li>
+							<li><a href="#">子菜单3</a></li>
+							<li><a href="#">子菜单4</a></li>
+						</ul>
+					</div>
+
+					<br><br>
+					
+					<div class="dropup">
+						<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">向上拉...<span class="caret"></span></button>
+						<ul class="dropdown-menu">
+							<li><a href="#">子菜单1</a></li>
+							<li><a href="#">子菜单2</a></li>
+							<li><a href="#">子菜单3</a></li>
+							<li><a href="#">子菜单4</a></li>
+						</ul>
+					</div>
+					
+					<br><br>
+
+					<div class="dropdown">
+						<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">分组标题...<span class="caret"></span></button>
+						<ul class="dropdown-menu">
+							<li class="dropdown-header">分组1</li>
+							<li><a href="#">子菜单1</a></li>
+							<li><a href="#">子菜单2</a></li>
+							<li class="dropdown-header">分组2</li>
+							<li><a href="#">子菜单3</a></li>
+							<li><a href="#">子菜单4</a></li>
+						</ul>
+					</div>
+
+					<br><br>
+
+					<div class="dropdown">
+						<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">水平线...<span class="caret"></span></button>
+						<ul class="dropdown-menu">
+							<li><a href="#">子菜单1</a></li>
+							<li><a href="#">子菜单2</a></li>
+							<li class="divider"></li>
+							<li><a href="#">子菜单3</a></li>
+							<li><a href="#">子菜单4</a></li>
+						</ul>
+					</div>
+
+					<br><br>
+
+					<div class="dropdown">
+						<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">禁用子菜单...<span class="caret"></span></button>
+						<ul class="dropdown-menu">
+							<li><a href="#">子菜单1</a></li>
+							<li><a href="#">子菜单2</a></li>
+							<li><a href="#">子菜单3</a></li>
+							<li class="disabled"><a href="#">子菜单4</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+	<script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+	<script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+</html>

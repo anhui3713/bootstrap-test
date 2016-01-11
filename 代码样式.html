@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Bootstrap练习 - 代码样式</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<!-- 新 Bootstrap 核心 CSS 文件 -->
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+	<style type="text/css">
+		
+		.row {
+			margin-bottom: 10px;
+		}
+
+		[class^='col-'] > div {
+			border: 1px solid rgba(150,150,150,.8);
+			border-radius: 5px;
+			/*background-color: rgba(150,150,150,.2);*/
+			padding: 10px 5px;
+		}
+
+		pre {
+			margin-bottom: 0px;
+		}
+	</style>
+</head>
+<body>
+	
+	<div class="container">
+		<h1>代码样式</h1>
+
+		<div class="row">
+			<div class="col-md-6">
+				<h4>code描述</h4>
+				<div>
+					code用于表示代码片段
+				</div>
+			</div>
+			<div class="col-md-6">
+				<h4>code示例</h4>
+				<div>
+					通过<code>code</code>标签可以显示代码片段。
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-6">
+				<h4>kbd描述</h4>
+				<div>
+					kbd用于表示用户输入命令（cmd）
+				</div>
+			</div>
+			<div class="col-md-6">
+				<h4>kbd示例</h4>
+				<div>
+					通过<kbd>kbd</kbd>标签可以显示用户输入命令。
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-6">
+				<h4>pre描述</h4>
+				<div>
+					pre可以表示大段代码
+				</div>
+			</div>
+			<div class="col-md-6">
+				<h4>pre示例</h4>
+				<div>
+<pre>
+function sayHello(name) {
+	alert('hello ' + name + '.');
+}
+</pre>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-6">
+				<h4>var描述</h4>
+				<div>
+					var用于表示变量
+				</div>
+			</div>
+			<div class="col-md-6">
+				<h4>var示例</h4>
+				<div>
+					<var>x</var>=<var>y</var>+<var>z</var>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-6">
+				<h4>samp描述</h4>
+				<div>
+					samp用于表示程序输出效果
+				</div>
+			</div>
+			<div class="col-md-6">
+				<h4>samp示例</h4>
+				<div>
+					程序输出：<samp>Hello World!!!</samp>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+	<script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+	<script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Bootstrap练习 - 表格样式</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<!-- 新 Bootstrap 核心 CSS 文件 -->
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+	<style type="text/css">
+		
+		.row {
+			margin-bottom: 20px;
+		}
+
+		[class^='col-'] > div {
+			border: 1px solid rgba(150,150,150,.8);
+			border-radius: 5px;
+			/*background-color: rgba(150,150,150,.2);*/
+			padding: 10px 5px;
+		}
+
+		pre {
+			margin-bottom: 0px;
+		}
+		
+	</style>
+</head>
+<body>
+	
+	<div class="container">
+		<h1>表格样式</h1>
+		<div class="row">
+			<div class="col-md-4"><h3>描述</h3></div>
+			<div class="col-md-8"><h3>示例</h3></div>
+		</div>
+		<div class="row">
+			<div class="col-md-4"><div>基本表格：只需要在表格上设置class="table"</div></div>
+			<div class="col-md-8">
+				<table class="table">
+					<thead>
+						<tr>
+							<th>姓名</th>
+							<th>性别</th>
+							<th>年龄</th>
+							<th>爱好</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>张三</td>
+							<td>男</td>
+							<td>18</td>
+							<td>打球</td>
+						</tr>
+						<tr>
+							<td>张三</td>
+							<td>男</td>
+							<td>18</td>
+							<td>打球</td>
+						</tr>
+						<tr>
+							<td>张三</td>
+							<td>男</td>
+							<td>18</td>
+							<td>打球</td>
+						</tr>
+						<tr>
+							<td>张三</td>
+							<td>男</td>
+							<td>18</td>
+							<td>打球</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-4"><div>隔行变色表格：只需要在表格上设置class="table table-striped"</div></div>
+			<div class="col-md-8">
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th>姓名</th>
+							<th>性别</th>
+							<th>年龄</th>
+							<th>爱好</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>张三</td>
+							<td>男</td>
+							<td>18</td>
+							<td>打球</td>
+						</tr>
+						<tr>
+							<td>张三</td>
+							<td>男</td>
+							<td>18</td>
+							<td>打球</td>
+						</tr>
+						<tr>
+							<td>张三</td>
+							<td>男</td>
+							<td>18</td>
+							<td>打球</td>
+						</tr>
+						<tr>
+							<td>张三</td>
+							<td>男</td>
+							<td>18</td>
+							<td>打球</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-4"><div>表格边框：只需要在表格上设置class="table table-bordered"</div></div>
+			<div class="col-md-8">
+				<table class="table table-bordered">
+					<thead>
+						<tr>
+							<th>姓名</th>
+							<th>性别</th>
+							<th>年龄</th>
+							<th>爱好</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>张三</td>
+							<td>男</td>
+							<td>18</td>
+							<td>打球</td>
+						</tr>
+						<tr>
+							<td>张三</td>
+							<td>男</td>
+							<td>18</td>
+							<td>打球</td>
+						</tr>
+						<tr>
+							<td>张三</td>
+							<td>男</td>
+							<td>18</td>
+							<td>打球</td>
+						</tr>
+						<tr>
+							<td>张三</td>
+							<td>男</td>
+							<td>18</td>
+							<td>打球</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-4"><div>高亮行：只需要在表格上设置class="table table-hover"</div></div>
+			<div class="col-md-8">
+				<table class="table table-hover">
+					<thead>
+						<tr>
+							<th>姓名</th>
+							<th>性别</th>
+							<th>年龄</th>
+							<th>爱好</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>张三</td>
+							<td>男</td>
+							<td>18</td>
+							<td>打球</td>
+						</tr>
+						<tr>
+							<td>张三</td>
+							<td>男</td>
+							<td>18</td>
+							<td>打球</td>
+						</tr>
+						<tr>
+							<td>张三</td>
+							<td>男</td>
+							<td>18</td>
+							<td>打球</td>
+						</tr>
+						<tr>
+							<td>张三</td>
+							<td>男</td>
+							<td>18</td>
+							<td>打球</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-4"><div>紧骤型表格：只需要在表格上设置class="table table-condensed",比一般表格行高值小</div></div>
+			<div class="col-md-8">
+				<table class="table table-condensed">
+					<thead>
+						<tr>
+							<th>姓名</th>
+							<th>性别</th>
+							<th>年龄</th>
+							<th>爱好</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>张三</td>
+							<td>男</td>
+							<td>18</td>
+							<td>打球</td>
+						</tr>
+						<tr>
+							<td>张三</td>
+							<td>男</td>
+							<td>18</td>
+							<td>打球</td>
+						</tr>
+						<tr>
+							<td>张三</td>
+							<td>男</td>
+							<td>18</td>
+							<td>打球</td>
+						</tr>
+						<tr>
+							<td>张三</td>
+							<td>男</td>
+							<td>18</td>
+							<td>打球</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-4"><div>设置颜色：只需要在对应的行或列上设置class="active success info warning danger"等值，即可设置对应的颜色</div></div>
+			<div class="col-md-8">
+				<table class="table table-hover">
+					<thead>
+						<tr>
+							<th>姓名</th>
+							<th>性别</th>
+							<th>年龄</th>
+							<th>爱好</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="active">
+							<td>张三</td>
+							<td>男</td>
+							<td class="warning">18</td>
+							<td>打球</td>
+						</tr>
+						<tr class="success">
+							<td>张三</td>
+							<td>男</td>
+							<td>18</td>
+							<td>打球</td>
+						</tr>
+						<tr class="info">
+							<td>张三</td>
+							<td class="danger">男</td>
+							<td>18</td>
+							<td>打球</td>
+						</tr>
+						<tr>
+							<td>张三</td>
+							<td>男</td>
+							<td>18</td>
+							<td>打球</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-4"><div>响应式表格: 只需要在table的容器上设置class="table-responsive",当浏览器宽度不足显示所有内容时提供滚动条。</div></div>
+			<div class="col-md-8 table-responsive">
+				<table class="table table-bordered">
+					<thead>
+						<tr>
+							<th>姓名</th>
+							<th>性别</th>
+							<th>年龄</th>
+							<th>爱好</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>张三张三张三张三</td>
+							<td>男</td>
+							<td>18</td>
+							<td>打球打球打球打球打球球打球打球球打球打球</td>
+						</tr>
+						<tr>
+							<td>张三</td>
+							<td>男</td>
+							<td>18</td>
+							<td>打球</td>
+						</tr>
+						<tr>
+							<td>张三</td>
+							<td>男</td>
+							<td>18</td>
+							<td>打球</td>
+						</tr>
+						<tr>
+							<td>张三</td>
+							<td>男</td>
+							<td>18</td>
+							<td>打球</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+
+	<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+	<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+	<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+</html>
