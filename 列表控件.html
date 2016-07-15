@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Bootstrap练习 - 列表控件</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<!-- 新 Bootstrap 核心 CSS 文件 -->
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+	<style type="text/css">
+		
+		.row {
+			margin-bottom: 20px;
+		}
+
+		[class^='col-'] > .remark {
+			border: 1px solid rgba(150,150,150,.8);
+			border-radius: 5px;
+			padding: 10px 5px;
+		}
+		
+	</style>
+</head>
+<body>
+	
+	<div class="container">
+		<h1>列表控件</h1>
+		<div class="row">
+			<div class="col-md-4"><h3>描述</h3></div>
+			<div class="col-md-8"><h3>示例</h3></div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				<div class="remark">
+					在<code>&lt;ul&gt;</code>或<code>&lt;ol&gt;</code>上设置<code>class="list-group"</code>,每个<code>&lt;li&gt;</code>上设置<code>class="list-group-item"</code>
+					<ul class="list-group">
+						<li class="list-group-item help-block">在列表项上加入徽章,会自动显示到右边</li>
+						<li class="list-group-item help-block">也可以使用<code>&lt;div&gt;</code>代替<code>&lt;ul&gt;</code>,使用<code>&lt;a&gt;</code>或<code>&lt;button&gt;</code>代替<code>&lt;li&gt;</code></li>
+						<li class="list-group-item help-block">在列表项上设置样式<code>active</code>来高亮</li>
+						<li class="list-group-item help-block">在列表项上设置样式<code>disabled</code>来禁用</li>
+						<li class="list-group-item help-block">在列表项上设置样式<code>.list-group-item-success</code>,<code>.list-group-item-info</code>,<code>.list-group-item-warning</code>,<code>.list-group-item-danger</code>来设置颜色</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-8">
+				<div class="remark">
+					<ul class="list-group">
+						<li class="list-group-item">列表项目1</li>
+						<li class="list-group-item">列表项目2</li>
+						<li class="list-group-item"><span class="badge">14</span>列表项目3</li>
+						<li class="list-group-item active"><span class="badge">3</span>列表项目4</li>
+						<li class="list-group-item disabled">列表项目5</li>
+					</ul>
+
+					<ol class="list-group">
+						<li class="list-group-item disabled">列表项目1</li>
+						<li class="list-group-item active">列表项目2</li>
+						<li class="list-group-item"><span class="badge">14</span>列表项目3</li>
+						<li class="list-group-item"><span class="badge">3</span>列表项目4</li>
+						<li class="list-group-item">列表项目5</li>
+					</ol>
+
+					<div class="list-group">
+						<a href="#" class="list-group-item active">列表项目1</a>
+						<a href="#" class="list-group-item">列表项目2</a>
+						<a href="#" class="list-group-item"><span class="badge">14</span>列表项目3</a>
+						<a href="#" class="list-group-item"><span class="badge">3</span>列表项目4</a>
+						<button class="list-group-item">列表项目5</button>
+					</div>
+
+					<div class="list-group">
+						<button class="list-group-item list-group-item-success">列表项目1</button>
+						<button class="list-group-item list-group-item-info">列表项目2</button>
+						<button class="list-group-item list-group-item-warning"><span class="badge">14</span>列表项目3</button>
+						<button class="list-group-item list-group-item-danger"><span class="badge">3</span>列表项目4</button>
+						<button class="list-group-item active">列表项目5</button>
+						<button class="list-group-item">列表项目5</button>
+						<button class="list-group-item disabled">列表项目5</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-4">
+				<div class="remark">
+					定制内容: 可以在列表项中添加更复杂的内容, 并添加<code>.list-group-heading</code>来表示标题,<code>.list-group-item-text</code>来表示文本
+				</div>
+			</div>
+			<div class="col-md-8">
+				<div class="remark">
+					<div class="list-group">
+						<a href="#" class="list-group-item">
+							<h4 class="list-group-item-heading">列表项中的标题</h4>
+							<p class="list-group-item-text">列表项中的文本</p>
+						</a>
+						<a href="#" class="list-group-item">
+							<h4 class="list-group-item-heading">列表项中的标题</h4>
+							<p class="list-group-item-text">列表项中的文本</p>
+						</a>
+						<a href="#" class="list-group-item">
+							<h4 class="list-group-item-heading">列表项中的标题</h4>
+							<p class="list-group-item-text">列表项中的文本</p>
+						</a>
+						<a href="#" class="list-group-item active">
+							<h4 class="list-group-item-heading">列表项中的标题</h4>
+							<p class="list-group-item-text">列表项中的文本</p>
+						</a>
+						<a href="#" class="list-group-item">
+							<h4 class="list-group-item-heading">列表项中的标题</h4>
+							<p class="list-group-item-text">列表项中的文本</p>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+	<script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+	<script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+</html>

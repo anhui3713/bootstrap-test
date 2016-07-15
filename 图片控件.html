@@ -21,10 +21,6 @@
 			border-radius: 5px;
 			padding: 10px 5px;
 		}
-
-		pre {
-			margin-bottom: 0px;
-		}
 		
 	</style>
 </head>
@@ -40,17 +36,120 @@
 			<div class="col-md-4">
 				<div class="remark">
 					图片样式
-					<br>圆形图片：img-circle
-					<br>圆角图片：img-rounded
-					<br>缩略图片：img-humbnail 会给图片添加一个边框，当图片超出可见区域时会缩放
+					<br>圆形图片：<code>.img-circle</code>
+					<br>圆角图片：<code>.img-rounded</code>
+					<br>缩略图片：<code>.img-humbnail</code> 会给图片添加一个边框，当图片超出可见区域时会缩放
 
 				</div>
 			</div>
 			<div class="col-md-8">
 				<div class="remark">
+					
 					<img src="./IMG20150513191818_small.jpg" alt="" class="img-circle">
 					<img src="./IMG20150513191818_small.jpg" alt="" class="img-rounded">
 					<img src="./IMG20150513191818_small.jpg" alt="" class="img-thumbnail">
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-4">
+				<div class="remark">
+					带连接的图片: 将<code>&lt;a&gt;</code>标签上设置<code>class="thumbnail"</code>
+				</div>
+			</div>
+			<div class="col-md-8">
+				<div class="remark">
+					<div class="row">
+						<div class="col-lg-3 col-md-4 col-xs-6">
+							<a href="#" class="thumbnail"><img src="./IMG20150513191818_small.jpg" alt="" ></a>
+						</div>
+						<div class="col-lg-3 col-md-4 col-xs-6">
+							<a href="#" class="thumbnail"><img src="./IMG20150513191818_small.jpg" alt="" ></a>
+						</div>
+						<div class="col-lg-3 col-md-4 col-xs-6">
+							<a href="#" class="thumbnail"><img src="./IMG20150513191818_small.jpg" alt="" ></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-4">
+				<div class="remark">
+					带自定义内容的图片: 将容器设置为<code>class="thumbnail"</code>,内容按自己要求布局
+				</div>
+			</div>
+			<div class="col-md-8">
+				<div class="remark">
+					<div class="row">
+						<div class="col-lg-4 col-md-4 col-xs-6">
+							<div class="thumbnail">
+								<img class="img-circle" src="./IMG20150513191818_small.jpg" alt="" >
+								<div class="caption">
+									<h3>图片描述标题</h3>
+									<p>图片描述的内容....可以说很多很多....很长很长的内容.....</p>
+									<p>
+										<a href="#" class="btn btn-primary">查看</a>
+										<a href="#" class="btn btn-default">收藏</a>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-xs-6">
+							<div class="thumbnail">
+								<img class="img-rounded"src="./IMG20150513191818_small.jpg" alt="" >
+								<div class="caption">
+									<h3>图片描述标题</h3>
+									<p>图片描述的内容....可以说很多很多....很长很长的内容.....</p>
+									<p>
+										<a href="#" class="btn btn-primary">查看</a>
+										<a href="#" class="btn btn-default">收藏</a>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-xs-6">
+							<div class="thumbnail">
+								<img class="img-thumbnail" src="./IMG20150513191818_small.jpg" alt="" >
+								<div class="caption">
+									<h3>图片描述标题</h3>
+									<p>图片描述的内容....可以说很多很多....很长很长的内容.....</p>
+									<p>
+										<a href="#" class="btn btn-primary">查看</a>
+										<a href="#" class="btn btn-default">收藏</a>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-xs-6">
+							<div class="thumbnail">
+								<img src="./IMG20150513191818_small.jpg" alt="" >
+								<div class="caption">
+									<h3>图片描述标题</h3>
+									<p>图片描述的内容....可以说很多很多....很长很长的内容.....</p>
+									<p>
+										<a href="#" class="btn btn-primary">查看</a>
+										<a href="#" class="btn btn-default">收藏</a>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-xs-6">
+							<div class="thumbnail">
+								<img src="./IMG20150513191818_small.jpg" alt="" >
+								<div class="caption">
+									<h3>图片描述标题</h3>
+									<p>图片描述的内容....可以说很多很多....很长很长的内容.....</p>
+									<p>
+										<a href="#" class="btn btn-primary">查看</a>
+										<a href="#" class="btn btn-default">收藏</a>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

@@ -21,10 +21,6 @@
 			border-radius: 5px;
 			padding: 10px 5px;
 		}
-
-		pre {
-			margin-bottom: 0px;
-		}
 		
 	</style>
 </head>
@@ -33,22 +29,190 @@
 	<div class="container">
 		<h1>导航控件</h1>
 		<div class="row">
+			<div class="col-md-12">
+				所有的导航都需要在<code>&lt;ul&gt;</code>上设置样式 <code>class="nav"</code>
+				<ul class="list-group">
+					<li class="list-group-item help-block">
+					为了在辅助设备（残疾人设备）上得到更好的支持，
+					务必将导航放置到<code>&lt;nav&gt;</code>标签或者<code>role="navigation"</code>容器中，
+					不要将role直接设置在<code>&lt;ul&gt;</code>上
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="row">
 			<div class="col-md-4"><h3>描述</h3></div>
 			<div class="col-md-8"><h3>示例</h3></div>
 		</div>
 		<div class="row">
 			<div class="col-md-4">
 				<div class="remark">
-					
+					标签页（选项卡）式导航： 在<code>&lt;ul&gt;</code>上设置样式<code>class="nav nav-tabs"</code>
+					<ul class="list-group">
+						<li class="list-group-item help-block">在<code>&lt;li&gt;</code>上设置样式<code>class="active"</code>来设置高亮</li>
+					</ul>
 				</div>
 			</div>
 			<div class="col-md-8">
 				<div class="remark">
+					<nav>
+						<ul class="nav nav-tabs">
+							<li role="presentation" class="active"><a href="#">菜单1</a></li>
+							<li role="presentation"><a href="#">菜单2</a></li>
+							<li role="presentation"><a href="#">菜单3</a></li>
+							<li role="presentation"><a href="#">菜单4</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
 
+
+		<div class="row">
+			<div class="col-md-4">
+				<div class="remark">
+					胶囊式导航： 在<code>&lt;ul&gt;</code>上设置样式<code>class="nav nav-pills"</code>
+					<ul class="list-group">
+						<li class="list-group-item help-block">也可以在<code>&lt;ul&gt;</code>上设置样式<code>class="nav nav-pills nav-stacked"</code>来让导航纵向显示</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-8">
+				<div class="remark">
+					<nav>
+						<ul class="nav nav-pills">
+							<li role="presentation" class="active"><a href="#">菜单1</a></li>
+							<li role="presentation"><a href="#">菜单2</a></li>
+							<li role="presentation"><a href="#">菜单3</a></li>
+							<li role="presentation"><a href="#">菜单4</a></li>
+						</ul>
+					</nav>
+					<br>
+					<nav>
+						<ul class="nav nav-pills nav-stacked">
+							<li role="presentation" class="active"><a href="#">菜单1</a></li>
+							<li role="presentation"><a href="#">菜单2</a></li>
+							<li role="presentation"><a href="#">菜单3</a></li>
+							<li role="presentation"><a href="#">菜单4</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-4">
+				<div class="remark">
+					两端对齐（横向拉伸）：只需要在<code>&lt;ul&gt;</code>的样式中加入<code>nav-justified</code>
+				</div>
+			</div>
+			<div class="col-md-8">
+				<div class="remark">
+					<nav>
+						<ul class="nav nav-tabs nav-justified">
+							<li role="presentation"><a href="#">菜单1</a></li>
+							<li role="presentation" class="active"><a href="#">菜单2</a></li>
+							<li role="presentation"><a href="#">菜单3</a></li>
+							<li role="presentation"><a href="#">菜单4</a></li>
+						</ul>
+					</nav>
+
+					<br>
+					
+					<nav>
+						<ul class="nav nav-pills nav-justified">
+							<li role="presentation"><a href="#">菜单1</a></li>
+							<li role="presentation" class="active"><a href="#">菜单2</a></li>
+							<li role="presentation"><a href="#">菜单3</a></li>
+							<li role="presentation"><a href="#">菜单4</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="row">
+			<div class="col-md-4">
+				<div class="remark">
+					禁用连接：在<code>&lt;li&gt;</code>上加入样式<code>class="disabled"</code>,该样式只能设置外观，不能达到禁用<code>&lt;a&gt;</code>标签的效果。
+				</div>
+			</div>
+			<div class="col-md-8">
+				<div class="remark">
+					<nav>
+						<ul class="nav nav-tabs nav-justified">
+							<li role="presentation"><a href="#">菜单1</a></li>
+							<li role="presentation" class="active"><a href="#">菜单2</a></li>
+							<li role="presentation" class="disabled"><a href="#">被禁用的</a></li>
+							<li role="presentation"><a href="#">菜单4</a></li>
+						</ul>
+					</nav>
+
+					<br>
+					
+					<nav>
+						<ul class="nav nav-pills nav-justified">
+							<li role="presentation"><a href="#">菜单1</a></li>
+							<li role="presentation" class="active"><a href="#">菜单2</a></li>
+							<li role="presentation"><a href="#">菜单3</a></li>
+							<li role="presentation" class="disabled"><a href="#">被禁用的</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-4">
+				<div class="remark">
+					带下拉菜单的导航：将li设置为<code>class="dropdown"</code>并在其中添加下拉组件
+					<ul class="list-group">
+						<li class="list-group-item help-block">为了在辅助设备上得到更好的支持,<code>&lt;li&gt;</code>也设置<code>role="presentation"</code></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-8">
+				<div class="remark">
+					<nav>
+						<ul class="nav nav-tabs">
+							<li role="presentation" class="active"><a href="#">菜单1</a></li>
+							<li role="presentation"><a href="#">菜单2</a></li>
+							<li role="presentation"><a href="#">菜单3</a></li>
+							<li role="presentation" class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">更多...<span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a href="#">子菜单1</a></li>
+									<li><a href="#">子菜单2</a></li>
+									<li><a href="#">子菜单3</a></li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+
+					<br>
+
+					<nav>
+						<ul class="nav nav-pills">
+							<li role="presentation" class="active"><a href="#">菜单1</a></li>
+							<li role="presentation"><a href="#">菜单2</a></li>
+							<li role="presentation"><a href="#">菜单3</a></li>
+							<li role="presentation" class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">更多...<span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a href="#">子菜单1</a></li>
+									<li><a href="#">子菜单2</a></li>
+									<li><a href="#">子菜单3</a></li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
 				</div>
 			</div>
 		</div>
 	</div>
+
+	<div style="height: 300px;"></div>
 
 	<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
 	<script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>

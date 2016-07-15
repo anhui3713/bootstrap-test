@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Bootstrap练习 - 徽章控件</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<!-- 新 Bootstrap 核心 CSS 文件 -->
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+	<style type="text/css">
+		
+		.row {
+			margin-bottom: 20px;
+		}
+
+		[class^='col-'] > .remark {
+			border: 1px solid rgba(150,150,150,.8);
+			border-radius: 5px;
+			padding: 10px 5px;
+		}
+		
+	</style>
+</head>
+<body>
+	
+	<div class="container">
+		<h1>徽章控件</h1>
+		<div class="row">
+			<div class="col-md-4"><h3>描述</h3></div>
+			<div class="col-md-8"><h3>示例</h3></div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				<div class="remark">
+					通过在<code>&lt;span&gt;</code>上设置<code>class="badge"</code>来实现给链接,按钮,导航等添加徽章.当<code>&lt;span&gt;</code>中没有内容时将不会显示.如需要其他背景色则需要自行设置样式
+				</div>
+			</div>
+			<div class="col-md-8">
+				<div class="remark">
+					<a href="#">连接上的徽章<span class="badge">10</span></a>
+					<button class="btn btn-primary">按钮上的徽章 <span class="badge">99+</span></button>
+					<button class="btn btn-primary">按钮上的空徽章 <span class="badge"></span></button>
+					<br><br>
+					<nav>
+						<ul class="nav nav-tabs">
+							<li><a href="#">菜单1</a></li>
+							<li class="active"><a href="#">菜单2<span class="badge">3</span></a></li>
+							<li><a href="#">菜单3</a></li>
+							<li><a href="#">菜单4<span class="badge">9</span></a></li>
+						</ul>
+					</nav>
+					<br><br>
+					<style type="text/css">
+						.badge.badge-primary {
+							background-color: #337ab7;
+						}
+
+						.badge.badge-success {
+							background-color: #5cb85c;
+						}
+
+						.badge.badge-info {
+							background-color: #5bc0de;
+						}
+						.badge.badge-warning {
+							background-color: #f0ad4e;
+						}
+
+						.badge.badge-danger {
+							background-color: #d9534f;
+						}
+
+					</style>
+					<div>
+						<nav>
+							<ul class="nav nav-pills">
+								<li><a href="#">菜单1<span class="badge badge-primary">3</span></a></li>
+								<li><a href="#">菜单2<span class="badge badge-success">3</span></a></li>
+								<li><a href="#">菜单3<span class="badge badge-info">3</span></a></li>
+								<li><a href="#">菜单4<span class="badge badge-warning">9</span></a></li>
+								<li><a href="#">菜单4<span class="badge badge-danger">9</span></a></li>
+								<li class="active"><a href="#">菜单4<span class="badge badge-danger">9</span></a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+	<script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+	<script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+</html>

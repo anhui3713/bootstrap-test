@@ -21,10 +21,6 @@
 			border-radius: 5px;
 			padding: 10px 5px;
 		}
-
-		pre {
-			margin-bottom: 0px;
-		}
 		
 	</style>
 </head>
@@ -44,7 +40,7 @@
 					<ul class="list-group">
 						<li class="list-group-item help-block">通过 span class="caret" 来表示一个下拉箭头</li>
 						<li class="list-group-item help-block">将容器设置为class="dropdown"可以使按钮和下拉对齐</li>
-						<li class="list-group-item help-block">将ul中的li设置为class="liider"就可以将li变成分割线</li>
+						<li class="list-group-item help-block">将ul中的li设置为class="divider"就可以将li变成水平线</li>
 						<li class="list-group-item help-block">只需要将容器设置为class="dropup"即可设置为向上拉</li>
 						<li class="list-group-item help-block">将ul中的li设置为class="dropdown-header"可将li设置为分组标题</li>
 						<li class="list-group-item help-block">将ul中的li设置为class="disabled"可将li设置为禁用状态</li>
@@ -63,6 +59,7 @@
 						</ul>
 					</div>
 
+、
 					<br><br>
 					
 					<div class="dropup">
@@ -107,7 +104,7 @@
 					<div class="dropdown">
 						<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">禁用子菜单...<span class="caret"></span></button>
 						<ul class="dropdown-menu">
-							<li><a href="#">子菜单1</a></li>
+							<li class="disabled"><a href="#">子菜单1</a></li>
 							<li><a href="#">子菜单2</a></li>
 							<li><a href="#">子菜单3</a></li>
 							<li class="disabled"><a href="#">子菜单4</a></li>

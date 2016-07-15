@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Bootstrap练习 - 媒体对象控件</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<!-- 新 Bootstrap 核心 CSS 文件 -->
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+	<style type="text/css">
+		
+		.row {
+			margin-bottom: 20px;
+		}
+
+		[class^='col-'] > .remark {
+			border: 1px solid rgba(150,150,150,.8);
+			border-radius: 5px;
+			padding: 10px 5px;
+		}
+		
+	</style>
+</head>
+<body>
+	
+	<div class="container">
+		<h1>媒体对象控件</h1>
+		<div class="row">
+			<div class="col-md-4"><h3>描述</h3></div>
+			<div class="col-md-8"><h3>示例</h3></div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				<div class="remark">
+					用<code>class="media"</code>来表示一条媒体记录,左边的图片需要包含在<code>.media-left</code>中,右边内容包含在<code>.media-body</code>中,图片需要设置<code>class="media-objeft"</code>,标题需要设置<code>class="media-heading"</code>
+					<ul class="list-group">
+						<li class="list-group-item help-block">
+							在<code>.media-body</code>中嵌入<code>.media</code>实现缩进嵌套.
+						</li>
+						<li class="list-group-item help-block">
+							使用<code>.media-right</code>可以在内容右边添加图片
+						</li>
+						<li class="list-group-item help-block">
+							在<code>.media-left</code>和<code>.media-right</code>上使用<code>.media-top</code>,<code>.media-middle</code>,<code>.media-bottom</code>设置图片上中下对齐
+						</li>
+					</ul>
+					<br><br>
+					<code>
+						&lt;div class="media"&gt;
+						<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class="media-left"&gt;
+						<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href="#"&gt;
+						<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img
+						<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;class="media-object"
+						<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;src="图片地址"
+						<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;style="width:&nbsp;64px;height:&nbsp;64px;"&gt;
+						<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;
+						<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+						<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class="media-body"&gt;
+						<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h4&nbsp;class="media-heading"&gt;媒体的标题&lt;/h4&gt;
+						<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;媒体的内容
+						<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+						<br>&lt;/div&gt;
+					</code>
+				</div>
+			</div>
+			<div class="col-md-8">
+				<div class="remark">
+					<div class="media">
+						<div class="media-left">
+							<a href="#"><img class="media-object" src="./IMG20150513191818_small.jpg" style="width: 64px;height: 64px;" ></a>
+						</div>
+						<div class="media-body">
+							<h4 class="media-heading">媒体列表的标题</h4>
+							每题列表的内容,随便书写....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....
+						</div>
+					</div>
+					<div class="media">
+						<div class="media-left">
+							<a href="#"><img class="media-object" src="./IMG20150513191818_small.jpg" style="width: 64px;height: 64px;" ></a>
+						</div>
+						<div class="media-body">
+							<h4 class="media-heading">媒体列表的标题</h4>
+							每题列表的内容,随便书写....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....
+							<div class="media">
+								<div class="media-left">
+									<a href="#"><img class="media-object" src="./IMG20150513191818_small.jpg" style="width: 64px;height: 64px;" ></a>
+								</div>
+								<div class="media-body">
+									<h4 class="media-heading">媒体列表的标题</h4>
+									每题列表的内容,随便书写....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....
+								</div>
+							</div>
+							<div class="media">
+								<div class="media-left">
+									<a href="#"><img class="media-object" src="./IMG20150513191818_small.jpg" style="width: 64px;height: 64px;" ></a>
+								</div>
+								<div class="media-body">
+									<h4 class="media-heading">媒体列表的标题</h4>
+									每题列表的内容,随便书写....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....
+									<div class="media">
+										<div class="media-left">
+											<a href="#"><img class="media-object" src="./IMG20150513191818_small.jpg" style="width: 64px;height: 64px;" ></a>
+										</div>
+										<div class="media-body">
+											<h4 class="media-heading">媒体列表的标题</h4>
+											每题列表的内容,随便书写....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....
+										</div>
+									</div>
+									<div class="media">
+										<div class="media-left">
+											<a href="#"><img class="media-object" src="./IMG20150513191818_small.jpg" style="width: 64px;height: 64px;" ></a>
+										</div>
+										<div class="media-body">
+											<h4 class="media-heading">媒体列表的标题</h4>
+											每题列表的内容,随便书写....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="media">
+								<div class="media-left">
+									<a href="#"><img class="media-object" src="./IMG20150513191818_small.jpg" style="width: 64px;height: 64px;" ></a>
+								</div>
+								<div class="media-body">
+									<h4 class="media-heading">媒体列表的标题</h4>
+									每题列表的内容,随便书写....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<div class="media">
+						<div class="media-left">
+							<a href="#"><img class="media-object" src="./IMG20150513191818_small.jpg" style="width: 64px;height: 64px;" ></a>
+						</div>
+						<div class="media-body">
+							<h4 class="media-heading">媒体列表的标题</h4>
+							每题列表的内容,随便书写....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....
+						</div>
+					</div>
+					<div class="media">
+						<div class="media-left">
+							<a href="#"><img class="media-object" src="./IMG20150513191818_small.jpg" style="width: 64px;height: 64px;" ></a>
+						</div>
+						<div class="media-body">
+							<h4 class="media-heading">媒体列表的标题</h4>
+							每题列表的内容,随便书写....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....
+						</div>
+					</div>
+					<div class="media">
+						<div class="media-body">
+							<h4 class="media-heading">媒体列表的标题</h4>
+							每题列表的内容,随便书写....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....
+						</div>
+						<div class="media-right">
+							<a href="#"><img class="media-object" src="./IMG20150513191818_small.jpg" style="width: 64px;height: 64px;" ></a>
+						</div>
+					</div>
+					<div class="media">
+						<div class="media-body">
+							<h4 class="media-heading">媒体列表的标题</h4>
+							每题列表的内容,随便书写....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....
+						</div>
+						<div class="media-right">
+							<a href="#"><img class="media-object" src="./IMG20150513191818_small.jpg" style="width: 64px;height: 64px;" ></a>
+						</div>
+					</div>
+					<div class="media">
+						<div class="media-left media-top">
+							<a href="#"><img class="media-object" src="./IMG20150513191818_small.jpg" style="width: 64px;height: 64px;" ></a>
+						</div>
+						<div class="media-body">
+							<h4 class="media-heading">媒体列表的标题</h4>
+							每题列表的内容,随便书写....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....
+						</div>
+						<div class="media-right media-middle">
+							<a href="#"><img class="media-object" src="./IMG20150513191818_small.jpg" style="width: 64px;height: 64px;" ></a>
+						</div>
+					</div>
+					<div class="media">
+						<div class="media-left media-middle">
+							<a href="#"><img class="media-object" src="./IMG20150513191818_small.jpg" style="width: 64px;height: 64px;" ></a>
+						</div>
+						<div class="media-body">
+							<h4 class="media-heading">媒体列表的标题</h4>
+							每题列表的内容,随便书写....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....
+						</div>
+						<div class="media-right media-bottom">
+							<a href="#"><img class="media-object" src="./IMG20150513191818_small.jpg" style="width: 64px;height: 64px;" ></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+	<script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+	<script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+</html>

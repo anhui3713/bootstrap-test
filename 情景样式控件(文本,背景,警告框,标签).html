@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Bootstrap练习 - 情景样式控件</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<!-- 新 Bootstrap 核心 CSS 文件 -->
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+	<style type="text/css">
+		
+		.row {
+			margin-bottom: 20px;
+		}
+
+		[class^='col-'] > .remark {
+			border: 1px solid rgba(150,150,150,.8);
+			border-radius: 5px;
+			padding: 10px 5px;
+		}
+
+		.bg-test p {
+			padding: 15px;
+		}
+		
+	</style>
+</head>
+<body>
+	
+	<div class="container">
+		<h1>情景样式控件</h1>
+		<div class="row">
+			<div class="col-md-4"><h3>描述</h3></div>
+			<div class="col-md-8"><h3>示例</h3></div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				<div class="remark">
+					情景文本: 在<code>&lt;p&gt;</code>标签上添加对应的样式,
+						<code>.text-muted</code>,
+						<code>.text-primary</code>,
+						<code>.text-success</code>,
+						<code>.text-info</code>,
+						<code>.text-warning</code>,
+						<code>.text-danger</code>
+				</div>
+			</div>
+			<div class="col-md-8">
+				<div class="remark">
+					<p class="text-muted">样式为text-muted的情景文本</p>
+					<p class="text-primary">样式为text-primary的情景文本</p>
+					<p class="text-success">样式为text-success的情景文本</p>
+					<p class="text-info">样式为text-info的情景文本</p>
+					<p class="text-warning">样式为text-warning的情景文本</p>
+					<p class="text-danger">样式为text-danger的情景文本</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-4">
+				<div class="remark">
+					情景背景: 在<code>&lt;p&gt;</code>标签上添加对应的样式,
+						<code>.bg-primary</code>,
+						<code>.bg-success</code>,
+						<code>.bg-info</code>,
+						<code>.bg-warning</code>,
+						<code>.bg-danger</code>
+				</div>
+			</div>
+			<div class="col-md-8">
+				<div class="remark bg-test">
+					<p class="bg-primary">样式为bg-primary的情景文本</p>
+					<p class="bg-success">样式为bg-success的情景文本</p>
+					<p class="bg-info">样式为bg-info的情景文本</p>
+					<p class="bg-warning">样式为bg-warning的情景文本</p>
+					<p class="bg-danger">样式为bg-danger的情景文本</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-4">
+				<div class="remark">
+					警告框: 在<code>&lt;div&gt;</code>标签上设置<code>class="alert"</code>,并通过 <code>.alert-success</code>,<code>.alert-info</code>,<code>.alert-warning</code>,<code>.alert-danger</code>来控制样式
+					<ul class="list-group">
+						<li class="list-group-item help-block">
+							如果要实现可以关闭的警告框,则需要在<code>&lt;div&gt;</code>中添加关闭按钮和在<code>&lt;div&gt;</code>上添加<code>.alert-dismissible</code>样式
+						</li>
+						<li class="list-group-item help-block">
+							如果要添加超链接,直接在警告框中的<code>&lt;a&gt;</code>标签上设置样式<code>class="alert-link"</code>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-8">
+				<div class="remark">
+					<div class="alert alert-success"> <strong>提示!</strong>这是alert-success的警告框</div>
+					<div class="alert alert-info"> <strong>提示!</strong>这是alert-info的警告框</div>
+					<div class="alert alert-warning"> <strong>提示!</strong>这是alert-warning的<a href="#" class="alert-link">带连接的</a>警告框</div>
+					<div class="alert alert-danger alert-dismissible">
+						<button type="button" class="close" data-dismiss="alert"><span>&times;</span></button>
+						<strong>提示!</strong>
+						这是alert-danger的可关闭警告框
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-4">
+				<div class="remark">
+					标签控件:在<code>&lt;span&gt;</code>上添加class="label label-default" 来实现标签控件.通过 
+					<code>label-default</code>,
+					<code>label-primary</code>,
+					<code>label-success</code>,
+					<code>label-info</code>,
+					<code>label-warning</code>,
+					<code>label-danger</code>
+					来控制标签的颜色
+				</div>
+			</div>
+			<div class="col-md-8">
+				<div class="remark">
+					<h1>放到<code>&lt;h1&gt;</code>中的<span class="label label-default">default标签</span></h1>
+					<h2>放到<code>&lt;h2&gt;</code>中的<span class="label label-primary">primary标签</span></h2>
+					<h3>放到<code>&lt;h3&gt;</code>中的<span class="label label-success">success标签</span></h3>
+					<h4>放到<code>&lt;h4&gt;</code>中的<span class="label label-info">info标签</span></h4>
+					<h5>放到<code>&lt;h5&gt;</code>中的<span class="label label-warning">warning标签</span></h5>
+					<h6>放到<code>&lt;h6&gt;</code>中的<span class="label label-danger">danger标签</span></h6>
+				</div>
+			</div>
+		</div>	
+	</div>
+
+	<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+	<script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+	<script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+</html>

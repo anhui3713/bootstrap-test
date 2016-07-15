@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Bootstrap练习 - 面板控件</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<!-- 新 Bootstrap 核心 CSS 文件 -->
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+	<style type="text/css">
+		
+		.row {
+			margin-bottom: 20px;
+		}
+
+		[class^='col-'] > .remark {
+			border: 1px solid rgba(150,150,150,.8);
+			border-radius: 5px;
+			padding: 10px 5px;
+		}
+		
+	</style>
+</head>
+<body>
+	
+	<div class="container">
+		<h1>面板控件</h1>
+		<div class="row">
+			<div class="col-md-4"><h3>描述</h3></div>
+			<div class="col-md-8"><h3>示例</h3></div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				<div class="remark">
+					面板控件: 将<code>&lt;div&gt;</code>设置为<code>class="panel panel-default"</code>来表示整个面板.其中的内容放到<code>.panel-body</code>中,
+					<br><br>
+					将标题放到<code>.panel-heading</code>中,如果想要标题中的链接文本有样式则需要将整个标题放到<code>.panel-title</code>中
+					<br><br>
+					将注脚放到<code>.panel-footer</code>中
+				</div>
+			</div>
+			<div class="col-md-8">
+				<div class="remark">
+					<div class="panel panel-default">
+						<div class="panel-body">
+							面板中的内容
+						</div>
+					</div>
+
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							面板标题 <a href="#">标题上的链接</a>
+						</div>
+						<div class="panel-body">
+							面板中的内容
+						</div>
+					</div>
+
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title">面板标题 <a href="#">标题上的链接</a></h3>
+						</div>
+						<div class="panel-body">
+							面板中的内容
+						</div>
+					</div>
+
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title">面板标题 <a href="#">标题上的链接</a></h3>
+						</div>
+						<div class="panel-body">
+							面板中的内容
+						</div>
+						<div class="panel-footer">面板注脚</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-4">
+				<div class="remark">
+					在面板上设置样式<code>.panel-primary</code>,<code>.panel-success</code>,<code>.panel-info</code>,<code>.panel-warning</code>,<code>.panel-danger</code>,来控制面板的颜色
+				</div>
+			</div>
+			<div class="col-md-8">
+				<div class="remark">
+					<div class="panel panel-primary">
+						<div class="panel-heading">样式为panel-primary的面板</div>
+						<div class="panel-body">
+							样式为panel-primary的面板的内容
+						</div>
+						<div class="panel-footer">
+							样式为panel-primary的注脚
+						</div>
+					</div>
+					<div class="panel panel-success">
+						<div class="panel-heading">样式为panel-success的面板</div>
+						<div class="panel-body">
+							样式为panel-success的面板的内容
+						</div>
+						<div class="panel-footer">
+							样式为panel-success的注脚
+						</div>
+					</div>
+					<div class="panel panel-info">
+						<div class="panel-heading">样式为panel-info的面板</div>
+						<div class="panel-body">
+							样式为panel-info的面板的内容
+						</div>
+						<div class="panel-footer">
+							样式为panel-info的注脚
+						</div>
+					</div>
+					<div class="panel panel-warning">
+						<div class="panel-heading">样式为panel-warning的面板</div>
+						<div class="panel-body">
+							样式为panel-warning的面板的内容
+						</div>
+						<div class="panel-footer">
+							样式为panel-warning的注脚
+						</div>
+					</div>
+					<div class="panel panel-danger">
+						<div class="panel-heading">样式为panel-danger的面板</div>
+						<div class="panel-body">
+							样式为panel-danger的面板的内容
+						</div>
+						<div class="panel-footer">
+							样式为panel-danger的注脚
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-4">
+				<div class="remark">
+					带表格的面板: 直接将<code>&lt;table&gt;</code>放到<code>.panel</code>中
+				</div>
+			</div>
+			<div class="col-md-8">
+				<div class="remark">
+					<div class="panel panel-default">
+						<div class="panel-heading">带表格的面板</div>
+						<div class="panel-body">
+							将表格直接放到panel中即可
+						</div>
+						<table class="table">
+							<thead>
+								<tr>
+									<th>姓名</th>
+									<th>性别</th>
+									<th>年龄</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>张三</td>
+									<td>男</td>
+									<td>18</td>
+								</tr>
+								<tr>
+									<td>张三</td>
+									<td>男</td>
+									<td>18</td>
+								</tr>
+								<tr>
+									<td>张三</td>
+									<td>男</td>
+									<td>18</td>
+								</tr>
+								<tr>
+									<td>张三</td>
+									<td>男</td>
+									<td>18</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<div class="panel panel-default">
+						<div class="panel-heading">带表格的面板</div>
+						<table class="table">
+							<thead>
+								<tr>
+									<th>姓名</th>
+									<th>性别</th>
+									<th>年龄</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>张三</td>
+									<td>男</td>
+									<td>18</td>
+								</tr>
+								<tr>
+									<td>张三</td>
+									<td>男</td>
+									<td>18</td>
+								</tr>
+								<tr>
+									<td>张三</td>
+									<td>男</td>
+									<td>18</td>
+								</tr>
+								<tr>
+									<td>张三</td>
+									<td>男</td>
+									<td>18</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-4">
+				<div class="remark">
+					带列表的面板: 直接将列表放到<code>.panel</code>中
+				</div>
+			</div>
+			<div class="col-md-8">
+				<div class="remark">
+					<div class="panel panel-default">
+						<div class="panel-heading">带表格的面板</div>
+						<div class="panel-body">面板中的内容,可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....可以很长....可以很多....</div>
+						<div class="list-group">
+							<a href="#" class="list-group-item">列表项目1</a>
+							<a href="#" class="list-group-item">列表项目2</a>
+							<a href="#" class="list-group-item">列表项目3</a>
+							<a href="#" class="list-group-item">列表项目4</a>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+	<script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+	<script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+</html>

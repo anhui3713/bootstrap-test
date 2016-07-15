@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Bootstrap练习 - 页头控件</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<!-- 新 Bootstrap 核心 CSS 文件 -->
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+	<style type="text/css">
+		
+		.row {
+			margin-bottom: 20px;
+		}
+
+		[class^='col-'] > .remark {
+			border: 1px solid rgba(150,150,150,.8);
+			border-radius: 5px;
+			padding: 10px 5px;
+		}
+
+	</style>
+</head>
+<body>
+	
+	<div class="container">
+		<h1>页头控件</h1>
+		<div class="row">
+			<div class="col-md-4"><h3>描述</h3></div>
+			<div class="col-md-8"><h3>示例</h3></div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				<div class="remark">
+					进度条: 在<code>&lt;div&gt;</code>上设置样式<code>class="progress"</code>,并在其中添加<code>&lt;div&gt;</code>设置样式为<code>class="progress-bar"</code>,
+					在内部的<code>&lt;div&gt;</code>上设置样式<code>style="40%"</code>来设置进度.
+					<ul class="list-group">
+						<li class="list-group-item help-block">如果要显示进度值,需要在内部<code>&lt;div&gt;</code>中填入具体进度值即可显示,如果需要让文字能够完整显示最好设置内部<code>&lt;div&gt;</code>的最小宽度,如:<code>min-width: 4em;</code> </li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-8">
+				<div class="remark">
+					<div class="progress">
+						<div class="progress-bar" style="width: 40%;"></div>
+					</div>
+
+					<div class="progress">
+						<div class="progress-bar" style="width: 1%;min-width: 4em;">进度: 1%</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-4">
+				<div class="remark">
+					情景进度条: 在内部<code>&lt;div&gt;</code>上设置进度条的颜色, <code>progress-bar-success</code>,<code>progress-bar-info</code>,<code>progress-bar-warning</code>,<code>progress-bar-danger</code>
+				</div>
+			</div>
+			<div class="col-md-8">
+				<div class="remark">
+					<div class="progress">
+						<div class="progress-bar" style="width: 10%;"></div>
+					</div>
+
+					<div class="progress">
+						<div class="progress-bar progress-bar-success" style="width: 20%;"></div>
+					</div>
+
+					<div class="progress">
+						<div class="progress-bar progress-bar-info" style="width: 30%;"></div>
+					</div>
+
+					<div class="progress">
+						<div class="progress-bar progress-bar-warning" style="width: 40%;"></div>
+					</div>
+
+					<div class="progress">
+						<div class="progress-bar progress-bar-danger" style="width: 50%;"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-4">
+				<div class="remark">
+					条纹效果,在内部<code>&lt;div&gt;</code>上设置样式<code>progress-bar-striped</code>
+				</div>
+			</div>
+			<div class="col-md-8">
+				<div class="remark">
+					<div class="progress">
+						<div class="progress-bar progress-bar-striped" style="width: 10%;"></div>
+					</div>
+
+					<div class="progress">
+						<div class="progress-bar progress-bar-success progress-bar-striped" style="width: 20%;"></div>
+					</div>
+
+					<div class="progress">
+						<div class="progress-bar progress-bar-info progress-bar-striped" style="width: 30%;"></div>
+					</div>
+
+					<div class="progress">
+						<div class="progress-bar progress-bar-warning progress-bar-striped" style="width: 40%;"></div>
+					</div>
+
+					<div class="progress">
+						<div class="progress-bar progress-bar-danger progress-bar-striped" style="width: 50%;"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-4">
+				<div class="remark">
+					条纹动画效果,在内部<code>&lt;div&gt;</code>上设置样式<code>active</code>
+				</div>
+			</div>
+			<div class="col-md-8">
+				<div class="remark">
+					<div class="progress">
+						<div class="progress-bar progress-bar-striped active" style="width: 10%;"></div>
+					</div>
+
+					<div class="progress">
+						<div class="progress-bar progress-bar-success progress-bar-striped active" style="width: 20%;"></div>
+					</div>
+
+					<div class="progress">
+						<div class="progress-bar progress-bar-info progress-bar-striped active" style="width: 30%;"></div>
+					</div>
+
+					<div class="progress">
+						<div class="progress-bar progress-bar-warning progress-bar-striped active" style="width: 40%;"></div>
+					</div>
+
+					<div class="progress">
+						<div class="progress-bar progress-bar-danger progress-bar-striped active" style="width: 50%;"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-4">
+				<div class="remark">
+					多个进度叠加: 在一个<code>.progress</code>中同时添加多个<code>.progress-bar</code>
+				</div>
+			</div>
+			<div class="col-md-8">
+				<div class="remark">
+					<div class="progress">
+						<div class="progress-bar" style="width: 10%;"></div>
+						<div class="progress-bar progress-bar-success" style="width: 10%;"></div>
+						<div class="progress-bar progress-bar-info" style="width: 10%;"></div>
+						<div class="progress-bar progress-bar-warning" style="width: 10%;"></div>
+						<div class="progress-bar progress-bar-danger" style="width: 10%;"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+	<script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+	<script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+</html>

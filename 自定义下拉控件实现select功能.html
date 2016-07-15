@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Bootstrap练习 - 下拉控件</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<!-- 新 Bootstrap 核心 CSS 文件 -->
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+	<style type="text/css">
+		/*
+		.row {
+			margin-bottom: 20px;
+		}
+
+		[class^='col-'] > .remark {
+			border: 1px solid rgba(150,150,150,.8);
+			border-radius: 5px;
+			padding: 10px 5px;
+		}
+		
+		.dropdown-select {
+			display: inline-block;
+			min-width: 200px;
+		}
+		.dropdown-select button {
+			position: relative;
+			width: 100%;
+			text-align: left;
+		}
+
+		.dropdown-select .dropdown-menu {
+			min-width: 100%;
+		}
+
+		.dropdown-select button .caret {
+			position: absolute;
+			right: 10px;
+			top: 15px;
+		}*/
+	</style>
+</head>
+<body>
+	
+	<div class="container">
+		<h1>下拉控件</h1>
+		<div class="row">
+			<div class="col-md-4"><h3>描述</h3></div>
+			<div class="col-md-8"><h3>示例</h3></div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				<div class="remark">
+					
+				</div>
+			</div>
+			<div class="col-md-8">
+				<div class="remark">
+					
+					<div class="dropdown dropdown-select" name="xxxxValue">
+						<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">选择内容<span class="caret"></span></button>
+						<ul class="dropdown-menu">
+							<li data-value="1"><a href="#">子菜单1</a></li>
+							<li selected data-value="2"><a href="#">子菜单2</a></li>
+							<li data-value="3"><a href="#">子菜单3</a></li>
+							<li data-value="4"><a href="#">子菜单4</a></li>
+						</ul>
+					</div>
+					<br>
+					<div class="dropup dropdown-select" name="xxxxValue">
+						<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">选择内容<span class="caret"></span></button>
+						<ul class="dropdown-menu">
+							<li data-value="1"><a href="#">子菜单1</a></li>
+							<li data-value="2"><a href="#">子菜单2</a></li>
+							<li data-value="3"><a href="#">子菜单3</a></li>
+							<li data-value="4"><a href="#">子菜单4</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<input name="hehe" type="button" value="haha" >
+
+	<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+	<script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+	<script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+	<script type="text/javascript">
+		;(function ($) {
+
+			// 重写现有的val方法,用于获取和设置选中项目的值
+			var valFn = $.prototype.val;
+			$.prototype.val = function (args) {
+				// 如果不是下拉控件,则直接按原方法执行并返回
+				if(!this.is(".dropdown-select")) {
+					return (!args || args.length == 0) ? valFn.call(this) :  valFn.call(this, args);
+				}
+
+				// 如果是下拉控件并参数为空,则或获取当前下拉控件的选择内容
+				if(!args || args.length == 0) {
+					return this.attr("value");
+				}
+
+				// 设置选中内容
+				this.find("li[data-value='" + args + "']").click();
+
+				return ;
+			};
+
+			// 重写现有的text方法,用于获取和设置选中项目的文本
+			var textFn = $.prototype.text;
+			$.prototype.text = function (args) {
+				// 如果不是下拉控件,则直接按原方法执行并返回
+				if(!this.is(".dropdown-select")) {
+					return (!args || args.length == 0) ? textFn.call(this) : textFn.call(this, args);
+				}
+
+				// 如果是下拉控件并参数为空,则或获取当前下拉控件的选择内容
+				if(!args || args.length == 0) {
+					return this.attr("text");
+				}
+
+				return ;
+			};
+
+			// 对jQuery进行扩展
+			$.fn.extend({
+				/**
+				 * 获取已经选中的数据对象
+				 * <p> 
+				 *   返回对象内容: <br>
+				 *   <code>
+				 *   {
+				 *      value: "当前选中的value",
+				 *      text: "当前选中的text"
+				 *   }
+				 *   </code>
+				 * </p>
+				 * 
+				 * @return 已选内容
+				 */
+				"selected": function () {
+					if(!this.is(".dropdown-select")) {
+						return ;
+					}
+
+					return {value: this.val(), text: this.text()};
+				},
+
+				/**
+				 * 取消选择,清空当前已经选择的内容
+				 */
+				"deselect": function (e) {
+					this.removeAttr("value");
+					this.removeAttr("text");
+					this.removeAttr("selectedIndex");
+					this.find("[data-toggle='dropdown']").html(this.data("default-label"));
+					this.find(".active").removeClass("active").removeAttr("selected");
+					this.find(":hidden").val("");
+				}
+			});
+
+			// 获取选择控件
+			var dropdownSelect = $(".dropdown-select");
+
+			// 为div添加隐藏域保存选择的数据,用于提交到服务器
+			dropdownSelect.prepend(function () {
+				return "<input type='hidden' name='" + $(this).closest(".dropdown-select").attr("name") + "'>";
+			});
+
+			// 点击或键盘回车操作事件
+			var selectEvent = function (e) {
+				// 当前发生事件的选项
+				var _o = $(this);
+				// 找到select容器
+				var _s = _o.closest(".dropdown-select");
+				// 找到容器中的dropdown按钮
+				var _vb = _s.find("[data-toggle='dropdown']");
+				// 获取按钮中的箭头控件
+				var _caret = _vb.find(".caret");
+
+				_s.attr("value", _o.data("value"));
+				_s.attr("text", _o.text());
+				_s.attr("selectedIndex", e.data.index);
+				_s.find("input[type='hidden']").val(_s.val());
+				_vb.html(_s.text()).append(_caret);
+
+				_s.find(".active").removeClass("active").removeAttr("selected");
+				_o.addClass("active").attr("selected", "selected");
+
+				_s.trigger("change");
+			};
+
+			// 迭代下拉控件,批量设置每个选项的事件
+			dropdownSelect.each(function (si, sItem) {
+				// 获取当前下拉菜单
+				var _s = $(this);
+
+				// 保存未选状态值
+				_s.data("default-label", _s.find("[data-toggle='dropdown']").html());
+
+				// 获取所有选项
+				var options = $(sItem).find("li");
+
+				// 设置超链接锚点地址无效
+				options.find("a").attr("href", "javascript: void(0);");
+
+				// 迭代所有选项,批量设置事件
+				options.each(function (oi,oItem) {
+					$(oItem).on({
+						"click": selectEvent,
+						"keyup": function (e) {
+							e.stopPropagation();
+							13 == e.keyCode && selectEvent.call(oItem);
+						}
+					}, {index: oi});
+				});
+
+				// 初始化默认选中
+				_s.find("li[selected]").click();
+			});
+
+		})(jQuery); 
+
+
+$(".dropdown").change(function () {
+	//alert($(this).val());
+});
+setTimeout(function () {
+	//$(".dropdown").deselect();
+}, 2000)
+	</script>
+</body>
+</html>

@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Bootstrap练习 - 导航条控件</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<!-- 新 Bootstrap 核心 CSS 文件 -->
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+	<style type="text/css">
+		
+		body {
+			padding-top: 70px;
+		}
+
+		.row {
+			margin-bottom: 20px;
+		}
+
+		[class^='col-'] > .remark {
+			border: 1px solid rgba(150,150,150,.8);
+			border-radius: 5px;
+			padding: 10px 5px;
+		}
+
+		.navbar-logo-img {
+			padding-top: 10px;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div class="container-fluid">
+		<h1>导航条控件</h1>
+		<div class="row">
+			<div class="col-md-4"><h3>描述</h3></div>
+			<div class="col-md-8"><h3>示例</h3></div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				<div class="remark">
+					导航条必须使用<code>&lt;nav&gt;</code>标签或<code>role="navigation"</code>的div中, 样式设置为<code>class="navbar navbar-default"</code>,<br>
+					导航条中的内容包含在<code>.navbar</code>中的<code>.container-fluid</code>容器中<br>
+				</div>
+			</div>
+			<div class="col-md-8">
+				<div class="remark">
+					<nav class="navbar navbar-default">
+						<div class="container-fluid">
+							
+						</div>
+					</nav>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-4">
+				<div class="remark">
+					将导航条中的logo等内容放置到<code>.navbar-fluid</code>中,用<code>class="navbar-brand"</code>来表示logo.可以替换成自己的图片或文字.
+
+					<ul class="list-group">
+						<li class="list-group-item help-block">
+							将导航条内放置品牌标志的地方替换为<code>&lt;img&gt;</code>元素即可展示自己的品牌图标。由于 <code>.navbar-brand</code> 已经被设置了内补（padding）和高度（height），你需要根据自己的情况添加一些 CSS 代码从而覆盖默认设置。
+						</li>
+					</ul>
+					
+				</div>
+			</div>
+			<div class="col-md-8">
+				<div class="remark">
+					<nav class="navbar navbar-default">
+						<div class="container-fluid">
+							<div class="navbar-header">
+								<a class="navbar-brand" href="#">文字LOGO</a>
+							</div>
+						</div>
+					</nav>
+
+					<br>
+
+					<nav class="navbar navbar-default">
+						<div class="container-fluid">
+							<div class="navbar-header">
+								<a class="navbar-brand navbar-logo-img" href="#"><img src="./图片logo.png"></a>
+							</div>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-4">
+				<div class="remark">
+					导航菜单: 将样式为<code>class="nav navbar-nav"</code>的<code>&lt;ul&gt;</code>标签放到导航条中,最好另起一个<code>&lt;div&gt;</code>
+					<br>
+					<ul class="list-group">
+						<li class="list-group-item help-block">在<code>&lt;li&gt;</code>标签上添加<code>class="active"</code>设置选中状态.</li>
+						<li class="list-group-item help-block">在<code>&lt;li&gt;</code>标签上添加<code>class="dropdown"</code>并在其中设置下拉控件来实现下拉菜单,下拉控件的按钮需要设置为<code>class="dropdown-toggle"</code></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-8">
+				<div class="remark">
+					<nav class="navbar navbar-default">
+						<div class="container-fluid">
+
+							<div class="navbar-header">
+								<a class="navbar-brand" href="#">LOGO</a>
+							</div>
+
+							<div>
+								<ul class="nav navbar-nav">
+									<li><a href="#">菜单1</a></li>
+									<li class="active"><a href="#">菜单2</a></li>
+									<li><a href="#">菜单3</a></li>
+									<li><a href="#">菜单4</a></li>
+									<li><a href="#">菜单5</a></li>
+									<li class="dropdown">
+										<a class="dropdown-toggle" role="dropdown" data-toggle="dropdown" href="#">更多..<span class="caret"></span></a>
+										<ul class="dropdown-menu">
+											<li><a href="#">子菜单1</a></li>
+											<li><a href="#">子菜单2</a></li>
+											<li role="separator" class="divider"></li>
+											<li><a href="#">子菜单3</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-4">
+				<div class="remark">
+					导航中加入表单: 需要将表单设置为<code>class="navbar-form"</code> 并在
+					<br>
+					<ul class="list-group">
+						<li class="list-group-item help-block">在<code>&lt;li&gt;</code>标签上添加<code>class="active"</code>设置选中状态.</li>
+						<li class="list-group-item help-block">在<code>&lt;li&gt;</code>标签上添加<code>class="dropdown"</code>并在其中设置下拉控件来实现下拉菜单,下拉控件的按钮需要设置为<code>class="dropdown-toggle"</code></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-8">
+				<div class="remark">
+					<nav class="navbar navbar-default">
+						<div class="container-fluid">
+							<div class="navbar-header">
+								<a class="navbar-brand" href="#">LOGO</a>
+							</div>
+
+							<div>
+								<ul class="nav navbar-nav">
+									<li><a href="#">菜单1</a></li>
+									<li class="active"><a href="#">菜单2</a></li>
+									<li class="dropdown">
+										<a class="dropdown-toggle" role="dropdown" data-toggle="dropdown" href="#">更多..<span class="caret"></span></a>
+										<ul class="dropdown-menu">
+											<li><a href="#">子菜单1</a></li>
+											<li><a href="#">子菜单2</a></li>
+											<li role="separator" class="divider"></li>
+											<li><a href="#">子菜单3</a></li>
+										</ul>
+									</li>
+								</ul>
+
+								<form class="navbar-form navbar-left" role="search">
+									<div class="form-group">
+										<input type="text" class="form-control" placeholder="Search">
+									</div>
+									<button class="btn btn-default">Search</button>
+								</form>
+							</div>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="row">
+			<div class="col-md-4">
+				<div class="remark">
+					非表单操作
+					<br>
+					<ul class="list-group">
+						<li class="list-group-item help-block">一般按钮在按钮上添加<code>navbar-btn</code>类</li>
+						<li class="list-group-item help-block">一般文本在<code>&lt;p&gt;</code>标签上添加<code>class="navbar-text"</code>, <code>.navbar-text</code>默认为<code>float: left;</code>,如果要按其他样式显示则需要自定义样式代码来控制.</li>
+						<li class="list-group-item help-block">一般的超链接直接在<code>&lt;a&gt;上添加<code>class="navbar-link"</code></code></li>
+						<li class="list-group-item help-block">通过<code>class="navbar-left"</code>和<code>class="navbar-right"</code>来控制导航中的内容对齐</li>
+					</ul>
+
+					
+				</div>
+			</div>
+			<div class="col-md-8">
+				<div class="remark">
+					<nav class="navbar navbar-default ">
+						<div class="container-fluid">
+							<div class="navbar-header">
+								<a class="navbar-brand" href="#">LOGO</a>
+							</div>
+
+							<div>
+								<ul class="nav navbar-nav">
+									<li><a href="#">菜单1</a></li>
+									<li class="active"><a href="#">菜单2</a></li>
+									<li class="dropdown">
+										<a class="dropdown-toggle" role="dropdown" data-toggle="dropdown" href="#">更多..<span class="caret"></span></a>
+										<ul class="dropdown-menu">
+											<li><a href="#">子菜单1</a></li>
+											<li><a href="#">子菜单2</a></li>
+											<li role="separator" class="divider"></li>
+											<li><a href="#">子菜单3</a></li>
+										</ul>
+									</li>
+								</ul>
+
+								<button class="btn btn-default navbar-btn">一般按钮</button>
+
+								<p class="navbar-text">一般文本<a href="#" class="navbar-link">一般链接</a></p>
+							</div>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-4">
+				<div class="remark">
+					固定在顶部的导航: 只需要在<code>&lt;nav&gt;</code>标签上添加<code>.navbar-fixed-top</code>样式
+					<br>
+					固定在底部的导航: 只需要在<code>&lt;nav&gt;</code>标签上添加<code>.navbar-fixed-bottom</code>样式
+					<br>
+					静止在顶部的导航: 只需要在<code>&lt;nav&gt;</code>标签上添加<code>.navbar-static-top</code>样式
+
+					<ul class="list-group">
+						<li class="list-group-item help-block">如果要让导航中的内容居中,则可以在<code>&lt;nav&gt;</code>标签中添加<code>&lt;div clss="container"&gt;</code></li>
+						<li class="list-group-item help-block">因为导航条会浮动到顶部,所以会遮盖顶部部分内容,所以可以通过设置<code>body { padding-top: 70px; }</code> 来将内容往下移动</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-8">
+				<div class="remark" style="max-height: 200px;overflow: auto;">
+					<nav class="navbar navbar-default navbar-fixed-top">
+						<div class="container-fluid">
+							<div class="navbar-header">
+								<a class="navbar-brand" href="#">LOGO</a>
+							</div>
+							<div>
+								<ul class="nav navbar-nav">
+									<li><a href="#">菜单1</a></li>
+									<li class="active"><a href="#">菜单2</a></li>
+									<li class="dropdown">
+										<a class="dropdown-toggle" role="dropdown" data-toggle="dropdown" href="#">更多..<span class="caret"></span></a>
+										<ul class="dropdown-menu">
+											<li><a href="#">子菜单1</a></li>
+											<li><a href="#">子菜单2</a></li>
+											<li role="separator" class="divider"></li>
+											<li><a href="#">子菜单3</a></li>
+										</ul>
+									</li>
+								</ul>
+								<p class="navbar-text">固定在顶部的导航</p>
+							</div>
+						</div>
+					</nav>
+
+					<nav class="navbar navbar-default navbar-fixed-bottom">
+						<div class="container">
+							<div class="navbar-header">
+								<a class="navbar-brand" href="#">LOGO</a>
+							</div>
+							<div>
+								<ul class="nav navbar-nav">
+									<li><a href="#">菜单1</a></li>
+									<li class="active"><a href="#">菜单2</a></li>
+									<li class="dropdown">
+										<a class="dropdown-toggle" role="dropdown" data-toggle="dropdown" href="#">更多..<span class="caret"></span></a>
+										<ul class="dropdown-menu">
+											<li><a href="#">子菜单1</a></li>
+											<li><a href="#">子菜单2</a></li>
+											<li role="separator" class="divider"></li>
+											<li><a href="#">子菜单3</a></li>
+										</ul>
+									</li>
+								</ul>
+								<p class="navbar-text">固定在底部的居中导航</p>
+							</div>
+						</div>
+					</nav>
+
+					<nav class="navbar navbar-default navbar-static-top">
+						<div class="container">
+							<div class="navbar-header">
+								<a class="navbar-brand" href="#">LOGO</a>
+							</div>
+							<div>
+								<ul class="nav navbar-nav">
+									<li><a href="#">菜单1</a></li>
+									<li class="active"><a href="#">菜单2</a></li>
+									<li class="dropdown">
+										<a class="dropdown-toggle" role="dropdown" data-toggle="dropdown" href="#">更多..<span class="caret"></span></a>
+										<ul class="dropdown-menu">
+											<li><a href="#">子菜单1</a></li>
+											<li><a href="#">子菜单2</a></li>
+											<li role="separator" class="divider"></li>
+											<li><a href="#">子菜单3</a></li>
+										</ul>
+									</li>
+								</ul>
+								<p class="navbar-text">静止在顶部的导航</p>
+							</div>
+						</div>
+					</nav>
+
+					<div style="height: 900px;background-color: #ccffcc;">
+						固定在顶部和底部的导航见网页顶部和底部导航条
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-4">
+				<div class="remark">
+					反色导航: 为<code>&lt;nav&gt;</code>标签设置为<code>class="navbar navbar-inverse"</code>样式
+				</div>
+			</div>
+			<div class="col-md-8">
+				<div class="remark">
+					<nav class="navbar navbar-inverse">
+						<div class="container-fluid">
+
+							<div class="navbar-header">
+								<a class="navbar-brand" href="#">LOGO</a>
+							</div>
+
+							<div>
+								<ul class="nav navbar-nav">
+									<li><a href="#">菜单1</a></li>
+									<li class="active"><a href="#">菜单2</a></li>
+									<li><a href="#">菜单3</a></li>
+									<li><a href="#">菜单4</a></li>
+									<li><a href="#">菜单5</a></li>
+									<li class="dropdown">
+										<a class="dropdown-toggle" role="dropdown" data-toggle="dropdown" href="#">更多..<span class="caret"></span></a>
+										<ul class="dropdown-menu">
+											<li><a href="#">子菜单1</a></li>
+											<li><a href="#">子菜单2</a></li>
+											<li role="separator" class="divider"></li>
+											<li><a href="#">子菜单3</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-4">
+				<div class="remark">
+					路径导航: 只需要在列表上设置样式<code>class="breadcrumb"</code>
+					<ul class="list-group">
+						<li class="list-group-item help-block">当前地址不用加a标签,在<code>&lt;li&gt;</code>上添加<code>class="active"</code>即可</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-8">
+				<div class="remark" style="background-color: #E5EBF2;">
+					<ol class="breadcrumb">
+						<li><a href="#">xxx管理系统</a></li>
+						<li><a href="#">xxx管理</a></li>
+						<li class="active">添加xxx</li>
+					</ol>
+
+					<div class="custom">
+						自定义样式路径导航
+						<style>
+							.custom .breadcrumb {
+								background-color: transparent;
+								font-size: 20px;
+							}
+
+							.custom .breadcrumb li {
+								float: left;
+							}
+
+							.custom .breadcrumb a {
+								position: relative;
+								padding: 8px 10px;
+								background-color: #fff;
+								overflow: visible;
+								color: #333;
+							}
+
+							.custom .breadcrumb a:hover {
+								text-decoration: none;
+								background-color: #777;
+								color: #fff;
+							}
+
+							.custom .breadcrumb a:hover:after {
+								background-color: #777;
+							}
+
+							.custom .breadcrumb a::after {
+								position: absolute;
+								content: " ";
+								width: 28px;
+								height: 28px;
+								transform: rotate(45deg);
+								background-color: #fff;
+								margin-left: -4px;
+								margin-top: 0px;
+								border-radius: 0px 0px 0px 28px;
+								z-index: 1;
+								box-shadow:  2px -2px 0 0 rgba(0, 0, 0, 0.2), 3px -3px 0 0 rgba(255, 255, 255, 0.1);
+							}
+
+							.custom .breadcrumb li+li::before{
+								content: "";
+								padding: 0px;
+							}
+
+							.custom .breadcrumb li + li > a {
+								padding-left: 30px;
+							}
+
+							.custom .breadcrumb li:first-child > a {
+								border-radius: 5px 0px 0px 5px;
+							}
+
+							.custom .breadcrumb a > i {
+								margin-right: 10px;
+							}
+
+							.custom .breadcrumb li.active {
+								padding: 5px 30px 5px 30px;
+								margin-top: -5px;
+								background-color: #f4f4f4;
+							}
+
+						</style>
+						<ol class="breadcrumb">
+							<li><a href="#"><i class="glyphicon glyphicon-menu-hamburger"></i>xxx管理系统</a></li>
+							<li><a href="#">xxx管理</a></li>
+							<li class="active">添加xxx</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div style="height: 300px;"></div>
+
+	<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+	<script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+	<script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
+	<script type="text/javascript">
+		function a() {
+			console.log('out a');
+		}
+
+		(function () {
+			if(false) {
+				function a() {
+					console.log('in a');
+				}
+			}
+
+			a();
+		})();
+	</script>
+</body>
+</html>
